@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://beta.json-generator.com/api/json/get/VkcBCgcA";
+    private static final String url = "http://beta.json-generator.com/api/json/get/EJZYD5kkl";
     private ProgressDialog pDialog;
     private List<Services> servicesList= new ArrayList<Services>();
     private ListView listView;
@@ -46,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
         // Showing progress dialog before making http request
         pDialog.setMessage("Loading...");
         pDialog.show();
+
+        TextView LocSelected =(TextView)findViewById(R.id.LocSelected);
+        Bundle b = getIntent().getExtras();
+        int value = b.getInt("key");
+
+        Bundle i= getIntent().getExtras();
+        if(i!=null){
+            String locSelect=i.getString("locSelect");
+            LocSelected.setText(locSelect);
+        }
 
 
         // Creating volley request obj

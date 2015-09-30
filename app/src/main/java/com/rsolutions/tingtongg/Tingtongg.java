@@ -8,19 +8,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class NewActivity extends AppCompatActivity {
+public class Tingtongg extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
+        setContentView(R.layout.activity_tingtongg);
 
         Button LaundryBtn=(Button)findViewById(R.id.LaundryBtn);
         LaundryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NewActivity.this,LocationActivity.class);
+                Intent intent = new Intent(Tingtongg.this,LocationSelector.class);
                 startActivity(intent);
             }
         });

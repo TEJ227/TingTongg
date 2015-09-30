@@ -15,8 +15,9 @@
             android:layout_height="wrap_content"
             android:text="Select Location Below :"
             android:textAlignment="center"
+            android:textColor="@android:color/black"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <ListView
             android:id="@+id/LocationList"

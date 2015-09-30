@@ -3,6 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_new">NewActivity</string>
+    <string name="title_activity_new">TingTongg.com</string>
     <string name="title_activity_location">LocationActivity</string>
+    <string name="laundryButton">Laundry/Dry Cleaning</string>
 </resources>

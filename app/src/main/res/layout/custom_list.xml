@@ -10,22 +10,21 @@
         android:layout_height="80dp"
         android:scaleType="centerCrop"/>
     <TextView
-
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:textSize="@dimen/title"
-        android:textStyle="bold"
         android:layout_toRightOf="@+id/thumbnail"
-        android:paddingLeft="8dp"/>
+        android:paddingLeft="8dp"
+        android:textSize="@dimen/title"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/details"
         android:layout_below="@+id/title"
         android:layout_toRightOf="@+id/thumbnail"
-        android:paddingLeft="8dp" />
+        android:paddingLeft="8dp"
+        android:textSize="@dimen/details" />
 
 </RelativeLayout>

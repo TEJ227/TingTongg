@@ -21,10 +21,10 @@ import model.Services;
  * Created by TEJ's on 9/22/2015.
  */
 public class CustomListAdapter extends BaseAdapter {
+    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
     private Activity activity;
     private LayoutInflater inflater;
     private List<Services> servicesItems;
-    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
     public CustomListAdapter(Activity activity, List<Services> servicesItems) {
         this.activity = activity;
@@ -63,7 +63,7 @@ public class CustomListAdapter extends BaseAdapter {
         TextView details = (TextView) convertView.findViewById(R.id.details);
 
 
-        // getting movie data for the row
+        // getting service data for the row
         Services s = servicesItems.get(position);
 
         // thumbnail image

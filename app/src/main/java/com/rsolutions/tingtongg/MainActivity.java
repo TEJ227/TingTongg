@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    // Movies json url
+    // Services json url
     private static final String url = "http://beta.json-generator.com/api/json/get/EJZYD5kkl";
     private ProgressDialog pDialog;
     private List<Services> servicesList= new ArrayList<Services>();
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Creating volley request obj
-        JsonArrayRequest movieReq = new JsonArrayRequest(url,
+        JsonArrayRequest serviceReq = new JsonArrayRequest(url,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                                // adding movie to movies array
+                                // adding service to service array
                                 servicesList.add(services);
 
                             } catch (JSONException e) {
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(movieReq);
+        AppController.getInstance().addToRequestQueue(serviceReq);
     }
 
     @Override
